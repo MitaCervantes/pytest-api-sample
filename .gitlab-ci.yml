@@ -1,0 +1,24 @@
+# The Docker image that will be used to build your app
+image: python:3.10-slim-bullseye
+# Functions that should be executed before the build script is run
+
+
+variables:
+  VIRTUAL_ENV: venv
+
+before_script:
+  # Create a virtual environment
+  - python3 -m venv $VIRTUAL_ENV
+  # Activate virtual environment
+  - source $VIRTUAL_ENV/bin/activate
+  # Update pip
+  - pip install --upgrade pip
+  # Install dependecies
+  - pip install -r requirements.txt
+
+# A visible job that runs the build stage
+build:
+  stage: build
+  script:
+  - pytest
+

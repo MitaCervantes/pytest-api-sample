@@ -1,0 +1,150 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "hourlyRate": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "number"
+        },
+        "currency": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "amount",
+        "currency"
+      ]
+    },
+    "clientId": {
+      "type": "string"
+    },
+    "workspaceId": {
+      "type": "string"
+    },
+    "billable": {
+      "type": "boolean"
+    },
+    "memberships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string"
+          },
+          "hourlyRate": {},
+          "costRate": {},
+          "targetId": {
+            "type": "string"
+          },
+          "membershipType": {
+            "type": "string"
+          },
+          "membershipStatus": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "userId",
+          "hourlyRate",
+          "costRate",
+          "targetId",
+          "membershipType",
+          "membershipStatus"
+        ]
+      }
+    },
+    "color": {
+      "type": "string"
+    },
+    "estimate": {
+      "type": "object",
+      "properties": {
+        "estimate": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "estimate",
+        "type"
+      ]
+    },
+    "archived": {
+      "type": "boolean"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "clientName": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "costRate": {},
+    "timeEstimate": {
+      "type": "object",
+      "properties": {
+        "estimate": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "resetOption": {},
+        "active": {
+          "type": "boolean"
+        },
+        "includeNonBillable": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "estimate",
+        "type",
+        "resetOption",
+        "active",
+        "includeNonBillable"
+      ]
+    },
+    "budgetEstimate": {},
+    "template": {
+      "type": "boolean"
+    },
+    "public": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "hourlyRate",
+    "clientId",
+    "workspaceId",
+    "billable",
+    "memberships",
+    "color",
+    "estimate",
+    "archived",
+    "duration",
+    "clientName",
+    "note",
+    "costRate",
+    "timeEstimate",
+    "budgetEstimate",
+    "template",
+    "public"
+  ]
+}

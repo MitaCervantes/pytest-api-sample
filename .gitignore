@@ -1,0 +1,15 @@
+# IntelliJ
+.idea
+#pycharm
+.cache
+.pytest_cache
+__pycache__
+
+#environments
+.venv
+#.env
+venv
+
+#allure
+/report
+/pytest_demo.egg-info/
